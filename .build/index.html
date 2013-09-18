@@ -20,6 +20,8 @@
 	<meta property=og:site_name content="Native Form Elements" />
 	<meta property=fb:admins content="60704718" />
 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="./static/js/nfe.js"></script>
 	<script type="text/javascript" src="//use.typekit.net/rtk8ama.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
@@ -245,6 +247,16 @@
 			<li><input type=color value="#e76252"></li>
 			<li><input type=color value="#e76252" disabled></li>
 			<li><pre class=markup>&lt;input type=color value="#e76252"&gt;</pre></li>
+		</ul>
+		<ul>
+			<li class="progress-element"><progress max="100" value="50"></progress></li>
+			<li>&nbsp;</li>
+			<li><pre class=markup>&lt;progress max="100" value="<span class="progress-progress">50</span>"&gt;&lt;/progress&gt;</pre></li>
+		</ul>
+		<ul>
+			<li><progress></progress></li>
+			<li>&nbsp;</li>
+			<li><pre class=markup>&lt;progress&gt;&lt;/progress&gt;</pre></li>
 		</ul>
 	</section>
 
