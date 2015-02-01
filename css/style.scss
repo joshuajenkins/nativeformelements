@@ -58,10 +58,11 @@ header {
     margin: $baseline 0;
 
     a {
-      color: $color-dark;
+      text-decoration: none;
+      color: $color-accent;
 
       &:hover {
-        color: $color-medium;
+        color: lighten($color-accent, 10%);
       }
     }
   }
