@@ -3,6 +3,17 @@
 $purple: #2f2064;
 $orange: #E76252;
 
+$color-dark:    rgb(30, 30, 30);
+$color-medium:  rgb(100, 100, 100);
+$color-border:  rgb(230, 230, 230);
+
+$font-sans: "m-1c";
+$font-mono: "mplus-1m";
+
+$fontSize-small:  12px;
+$fontSize:        15px;
+$baseline:        21px;
+
 body {
   background-color: #fff;
 }
@@ -19,39 +30,48 @@ body {
 }
 
 header {
-  margin: 10px auto;
-  font-family: "omnes-pro", "Helvetica Neue", "Helvetica", sans-serif;
+  margin: 0 auto;
+  font-family: $font-sans;
 
   h1 {
-    color: $purple;
+    color: $color-dark;
     margin: 0;
-    font-size: 38px;
-    font-weight: 500;
-    margin: 0 0 20px 0;
-    text-ulansform: uppercase;
-    border-bottom: 2px solid $purple;
-    line-height: 1.25em;
-    padding: 0 0 15px 0;
+    font-size: $fontSize;
+    font-weight: 900;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: $baseline;
+    padding: 0;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: $fontSize;
+    line-height: $baseline;
     font-weight: normal;
-    color: $orange;
+    color: $color-medium;
     margin: 0;
+    font-weight: 500;
   }
 
   .attribution {
-    color: $purple;
+    font-size: $fontSize;
+    line-height: $baseline;
+    font-weight: 500;
+    color: $color-dark;
+    margin: $baseline 0 0 0;
 
     a {
-      color: $purple;
+      color: $color-dark;
 
       &:hover {
-        color: $orange;
+        color: $color-medium;
       }
     }
   }
+}
+
+pre, code {
+  margin: 0;
 }
 
 .elements {
@@ -59,25 +79,26 @@ header {
   
 
   ul {
-    margin: 0;
-    padding: 30px 0 0 0;
+    margin: $baseline 0 0 0;
     overflow: hidden;
-    border-top: 1px solid #ddd;
+    padding: $baseline 0 0 0;
+    border-top: 1px solid $color-border;
   }
 
   li {
     margin: 0;
-    padding: 0 0 10px 0;
+    padding: 0;
     list-style: none;
 
 
     .markup {
-      font-size: 13px;
+      font-size: $fontSize-small;
       display: block;
       min-width: 320px;
-      font-weight: 200;
-      font-family: "source-code-pro", monospace;
-      color: #222;
+      font-family: $font-mono;
+      color: $color-dark;
+      line-height: $baseline;
+      margin: 0;
     }
   }
 
@@ -95,12 +116,12 @@ header {
 @media screen and (min-width: 1200px) {
 
   #container {
-    width: 90%;
+    width: 95%;
     padding: 0;
   }
 
   header {
-    margin: 70px auto;
+    margin: $baseline*2 auto;
     float: left;
     width: 16%;
     position: fixed;
@@ -111,39 +132,42 @@ header {
   }
 
   .elements {
-    margin: 70px auto;
+    margin: $baseline*2 auto;
     float: right;
     width: 75%;
 
     ul {
-      padding: 0;
-      border: none;
+      // padding: 0;
+      // border: none;
     }
 
     li {
       float: left;
       padding: 0 5px 5px 5px;
 
-      .markup {
-        color: #666;
-      }
-
       &:first-child, &:nth-child(2) {
-        width: 23%;
-        padding: 12px 0 0 0;
+        width: 30%;
+        // padding: 12px 0 0 0;
+        padding-left: 0;
+        padding-right: 0;
       }
     }
 
     .heading {
 
       display: block;
+      border: none;
+      padding-top: 0;
+      margin-top: 0;
 
       li {
-        padding: 0 0 15px 0;
-        font-size: 20px;
-        font-weight: normal;
-        font-family: "omnes-pro", "Helvetica Neue", "Helvetica", sans-serif;
-        color: $purple;
+        padding: 0;
+        font-size: $fontSize-small;
+        font-weight: 900;
+        font-family: $font-sans;
+        color: $color-dark;
+        text-transform: uppercase;
+        line-height: $baseline;
       }
     }
   }
