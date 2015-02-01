@@ -88,6 +88,9 @@ pre, code {
     padding: 0;
     list-style: none;
 
+    &:nth-child(1), &:nth-child(2) {
+      margin-bottom: $baseline;
+    }
 
     .markup {
       font-size: $fontSize-small;
@@ -145,13 +148,12 @@ pre, code {
 
     li {
       float: left;
-      padding: 0 5px 5px 5px;
 
       &:first-child, &:nth-child(2) {
         width: 30%;
-        // padding: 12px 0 0 0;
         padding-left: 0;
         padding-right: 0;
+        margin-bottom: 0;
       }
     }
 
