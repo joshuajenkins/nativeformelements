@@ -35,7 +35,7 @@ header {
     color: $color-accent;
     margin: 0 0 $baseline 0;
     font-size: $fontSize;
-    font-weight: 900;
+    font-weight: 200;
     text-transform: uppercase;
     line-height: $baseline;
     padding: 0;
@@ -167,7 +167,7 @@ pre, code {
       li {
         padding: 0;
         font-size: $fontSize-small;
-        font-weight: 900;
+        font-weight: 200;
         font-family: $font-sans;
         color: $color-medium;
         text-transform: uppercase;
