@@ -166,11 +166,10 @@ pre, code {
 
       li {
         padding: 0;
-        font-size: $fontSize-small;
+        font-size: $fontSize;
         font-weight: 200;
         font-family: $font-sans;
         color: $color-medium;
-        text-transform: uppercase;
         line-height: $baseline;
       }
     }
