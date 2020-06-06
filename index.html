@@ -2,257 +2,249 @@
 
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width">
-  
-  <meta name="description" content="What every form element looks like in your browser on your operating system." />
-  <meta name="keywords" content="Native Form Elements, HTML, Forms, Display, View, Native" />
-  <meta name="author" content="Joshua Jenkins">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="css/style.css">
+	<meta name="description" content="What every form element looks like in your browser on your operating system." />
+	<meta name="keywords" content="Native Form Elements, HTML, Forms, Display, View, Native" />
+	<meta name="author" content="Joshua Jenkins">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <meta property=og:title content="Native Form Elements" />
-  <meta property=og:type content="website" />
-  <meta property=og:url content="http://nativeformelements.com" />
-  <meta property=og:image content="http://s3.amazonaws.com/joshuajenkins-heroku/img/fb-image.png" />
-  <meta property=og:site_name content="Native Form Elements" />
-  <meta property=fb:admins content="60704718" />
+	<link rel="stylesheet" href="css/style.css">
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="js/nfe.js"></script>
+	<meta property=og:title content="Native Form Elements" />
+	<meta property=og:type content="website" />
+	<meta property=og:url content="http://nativeformelements.com" />
+	<meta property=og:site_name content="Native Form Elements" />
 
-  <title>Native Form Elements</title>
+	<title>Native Form Elements</title>
 </head>
 
 <body>
 
-<section id="container">
+	<div class="wrapper">
 
-  <header>
-    <h1>Native form elements</h1>
-    <h2>This is what every HTML5 form element looks like on your current operating system and browser.</h2>
-    <p class="attribution">
-      by <a href="http://twitter.com/joshuajenkins">@joshuajenkins</a>
-    </p>
-  </header>
+		<header>
+			<h1>Native Form Elements</h1>
+			<h2>This is what every (ish?) <span class="small-caps">html5</span> form element looks like on your current operating system and browser. by <a href="//twitter.com/joshuajenkins">Joshua&nbsp;Jenkins</a></h2>
+			<div class="show-disabled-control">
+				<input name="show-disabled" id="show-disabled" type="checkbox">
+				<label for="show-disabled">Show disabled elements</label>
+			</div>
+		</header>
 
-  <section class="elements">
-    <ul class="heading">
-      <li>Element</li>
-      <li>Disabled element</li>
-      <li>Markup</li>
-    </ul>
-    <ul>
-      <li><input autofocus></li>
-      <li><input autofocus disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input autofocus&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input></li>
-      <li><input disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><form><input required><input type=submit></form></li>
-      <li><form><input required disabled><input type=submit disabled></form></li>
-      <li><pre><code class="markup language-markup">&lt;input required&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=text></li>
-      <li><input type=text disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=text&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><textarea></textarea></li>
-      <li><textarea disabled></textarea></li>
-      <li><pre><code class="markup language-markup">&lt;textarea&gt;&lt;/textarea&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=password placeholder=password></li>
-      <li><input type=password placeholder=password disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=password placeholder=password&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=radio></li>
-      <li><input type=radio disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=radio&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=radio checked></li>
-      <li><input type=radio checked disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=radio checked&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=checkbox></li>
-      <li><input type=checkbox disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=checkbox&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=checkbox checked></li>
-      <li><input type=checkbox checked disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=checkbox checked&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><select><option></option><option>Option 1</option></select></li>
-      <li><select disabled><option></option><option>Option 1</option></select></li>
-      <li><pre><code class="markup language-markup">
+		<div id="elements">
+			<div class="element">
+				<input autofocus>
+				<div class="disabled-el"><input autofocus disabled></div>
+				<pre><code class="markup language-markup">&lt;input autofocus&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input>
+				<div class="disabled-el"><input disabled></div>
+				<pre><code class="markup language-markup">&lt;input&gt;</code></pre>
+			</div>
+			<div class="element">
+				<form><input required><input type=submit></form>
+				<div class="disabled-el"><form><input required disabled><input type=submit disabled></form></div>
+				<pre><code class="markup language-markup">&lt;input required&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=text>
+				<div class="disabled-el"><input type=text disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=text&gt;</code></pre>
+			</div>
+			<div class="element">
+				<textarea></textarea>
+				<div class="disabled-el"><textarea disabled></textarea></div>
+				<pre><code class="markup language-markup">&lt;textarea&gt;&lt;/textarea&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=password placeholder=password>
+				<div class="disabled-el"><input type=password placeholder=password disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=password placeholder=password&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=radio>
+				<div class="disabled-el"><input type=radio disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=radio&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=radio checked>
+				<div class="disabled-el"><input type=radio checked disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=radio checked&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=checkbox>
+				<div class="disabled-el"><input type=checkbox disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=checkbox&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=checkbox checked>
+				<div class="disabled-el"><input type=checkbox checked disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=checkbox checked&gt;</code></pre>
+			</div>
+			<div class="element">
+				<select><option></option><option>Option 1</option></select>
+				<div class="disabled-el"><select disabled><option></option><option>Option 1</option></select></div>
+<pre><code class="markup language-markup">
 &lt;select&gt;
-  &lt;option&gt;&lt;/option&gt;
-  &lt;option&gt;Option 1&lt;/option&gt;
+	&lt;option&gt;&lt;/option&gt;
+	&lt;option&gt;Option 1&lt;/option&gt;
 &lt;/select&gt;</code></pre>
-      </li>
-    </ul>
-    <ul>
-      <li><select><optgroup label="Option group 1"><option>Option 1</option><option>Option 2</option></optgroup><optgroup><option>Option 3</option></optgroup></select></li>
-      <li><select disabled><optgroup label="Option group 1"><option>Option 1</option><option>Option 2</option></optgroup><optgroup><option>Option 3</option></optgroup></select></li>
-      <li><pre><code class="markup language-markup">
+
+			</div>
+			<div class="element">
+				<select><optgroup label="Option group 1"><option>Option 1</option><option>Option 2</option></optgroup><optgroup><option>Option 3</option></optgroup></select>
+				<div class="disabled-el"><select disabled><optgroup label="Option group 1"><option>Option 1</option><option>Option 2</option></optgroup><optgroup><option>Option 3</option></optgroup></select></div>
+<pre><code class="markup language-markup">
 &lt;select&gt;
-  &lt;optgroup label="Option group 1"&gt;
-    &lt;option&gt;Option 1&lt;/option&gt;
-    &lt;option&gt;Option 2&lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup>
-    &lt;option&gt;Option 3&lt;/option&gt;
-  &lt;/optgroup&gt;
+	&lt;optgroup label="Option group 1"&gt;
+	&lt;option&gt;Option 1&lt;/option&gt;
+	&lt;option&gt;Option 2&lt;/option&gt;
+	&lt;/optgroup&gt;
+	&lt;optgroup>
+	&lt;option&gt;Option 3&lt;/option&gt;
+	&lt;/optgroup&gt;
 &lt;/select&gt;</code></pre>
-      </li>
-    </ul>
-    <ul>
-      <li><input type=text placeholder=placeholder></li>
-      <li><input type=text placeholder=placeholder disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=text placeholder=placeholder&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=search></li>
-      <li><input type=search disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=search&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=file></li>
-      <li><input type=file disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=file&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><fieldset><legend>Legend</legend><label for=field>Label</label><input id=field></fieldset></li>
-      <li><fieldset disabled><legend>Legend</legend><label for=field>Label</label><input id=field></fieldset></li>
-      <li><pre><code class="markup language-markup">
+
+			</div>
+			<div class="element">
+				<input type=text placeholder=placeholder>
+				<div class="disabled-el"><input type=text placeholder=placeholder disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=text placeholder=placeholder&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=search>
+				<div class="disabled-el"><input type=search disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=search&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=file>
+				<div class="disabled-el"><input type=file disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=file&gt;</code></pre>
+			</div>
+			<div class="element">
+				<fieldset><legend>Legend</legend><label for=field>Label</label><input id=field></fieldset>
+				<div class="disabled-el"><fieldset><legend>Legend</legend><label for=field>Label</label><input id=field disabled></fieldset></div>
+<pre><code class="markup language-markup">
 &lt;fieldset&gt;
-  &lt;legend>Legend&lt;/legend&gt;
-  &lt;label for=field&gt;Label&lt;/label&gt;
-  &lt;input id=field&gt;
+	&lt;legend>Legend&lt;/legend&gt;
+	&lt;label for=field&gt;Label&lt;/label&gt;
+	&lt;input id=field&gt;
 &lt;/fieldset&gt;</code></pre>
-      </li>
-    </ul>
-    <ul>
-      <li><input type=submit></li>
-      <li><input type=submit disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=submit&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><button>Button</button></li>
-      <li><button disabled>Button</button></li>
-      <li><pre><code class="markup language-markup">&lt;button&gt;Button&lt;/button&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=reset></li>
-      <li><input type=reset disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=reset&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=email></li>
-      <li><input type=email disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=email&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=tel></li>
-      <li><input type=tel disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=tel&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=url></li>
-      <li><input type=url disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=url&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=number></li>
-      <li><input type=number disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=number&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=number min=0 max=15 step=3></li>
-      <li><input type=number min=0 max=15 step=3 disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=number min=0 max=15 step=3&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=range></li>
-      <li><input type=range disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=range&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=range min=0 max=15 step=3></li>
-      <li><input type=range min=0 max=15 step=3 disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=range min=0 max=15 step=3&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=date></li>
-      <li><input type=date disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=date&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=month></li>
-      <li><input type=month disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=month&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=week></li>
-      <li><input type=week disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=week&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=time></li>
-      <li><input type=time disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=time&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=datetime></li>
-      <li><input type=datetime disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=datetime&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=datetime-local></li>
-      <li><input type=datetime-local disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=datetime-local&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=color></li>
-      <li><input type=color disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=color&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><input type=color value="#ff3d3d"></li>
-      <li><input type=color value="#ff3d3d" disabled></li>
-      <li><pre><code class="markup language-markup">&lt;input type=color value="#ff3d3d"&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li class="progress-element"><progress max="100" value="50"></progress></li>
-      <li>&nbsp;</li>
-      <li><pre><code class="markup language-markup">&lt;progress max="100" value="<span class="progress-progress">50</span>"&gt;&lt;/progress&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li><progress></progress></li>
-      <li>&nbsp;</li>
-      <li><pre><code class="markup language-markup">&lt;progress&gt;&lt;/progress&gt;</code></pre></li>
-    </ul>
-    <ul>
-      <li class="meter-element"><meter value="50" min="0" max="100" low="25" high="75" optimum="15"></meter></li>
-      <li>&nbsp;</li>
-      <li><pre><code class="markup language-markup">&lt;meter value="<span class="meter-value">50</span>" min="0" max="100"<br/> low="25" high="75" optimum="15"&gt;&lt;/meter&gt;</code></pre></li>
-    </ul>
-  </section>
 
-</section>
+			</div>
+			<div class="element">
+				<input type=submit>
+				<div class="disabled-el"><input type=submit disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=submit&gt;</code></pre>
+			</div>
+			<div class="element">
+				<button>Button</button>
+				<div class="disabled-el"><button disabled>Button</button></div>
+				<pre><code class="markup language-markup">&lt;button&gt;Button&lt;/button&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=reset>
+				<div class="disabled-el"><input type=reset disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=reset&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=email>
+				<div class="disabled-el"><input type=email disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=email&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=tel>
+				<div class="disabled-el"><input type=tel disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=tel&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=url>
+				<div class="disabled-el"><input type=url disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=url&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=number>
+				<div class="disabled-el"><input type=number disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=number&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=number min=0 max=15 step=3>
+				<div class="disabled-el"><input type=number min=0 max=15 step=3 disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=number min=0 max=15 step=3&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=range>
+				<div class="disabled-el"><input type=range disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=range&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=range min=0 max=15 step=3>
+				<div class="disabled-el"><input type=range min=0 max=15 step=3 disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=range min=0 max=15 step=3&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=date>
+				<div class="disabled-el"><input type=date disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=date&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=month>
+				<div class="disabled-el"><input type=month disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=month&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=week>
+				<div class="disabled-el"><input type=week disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=week&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=time>
+				<div class="disabled-el"><input type=time disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=time&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=datetime>
+				<div class="disabled-el"><input type=datetime disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=datetime&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=datetime-local>
+				<div class="disabled-el"><input type=datetime-local disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=datetime-local&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=color>
+				<div class="disabled-el"><input type=color disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=color&gt;</code></pre>
+			</div>
+			<div class="element">
+				<input type=color value="#ff3d3d">
+				<div class="disabled-el"><input type=color value="#ff3d3d" disabled></div>
+				<pre><code class="markup language-markup">&lt;input type=color value="#ff3d3d"&gt;</code></pre>
+			</div>
+			<div class="element">
+				<progress max="100" value="50" id="progress-meter"></progress>
+				&nbsp;
+				<pre><code class="markup language-markup">&lt;progress max="100" value="<span id="progress-meter-value">50</span>"&gt;&lt;/progress&gt;</code></pre>
+			</div>
+			<div class="element">
+				<progress></progress>
+				&nbsp;
+				<pre><code class="markup language-markup">&lt;progress&gt;&lt;/progress&gt;</code></pre>
+			</div>
+			<div class="element">
+				<meter value="50" min="0" max="100" low="25" high="75" optimum="15" id="meter-meter"></meter>
+				&nbsp;
+				<pre><code class="markup language-markup">&lt;meter value="<span id="meter-meter-value">50</span>" min="0" max="100"<br /> low="25" high="75" optimum="15"&gt;&lt;/meter&gt;</code></pre>
+			</div>
+		</div>
 
-  </body>
-  </html>
+	</div>
+
+	<script src="js/nfe.js"></script>
+</body>
+</html>

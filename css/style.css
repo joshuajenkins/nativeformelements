@@ -1,129 +1,95 @@
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([conulols]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a:focus{outline:dotted thin}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,sulong{font-weight:700}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}table{border-collapse:collapse;border-spacing:0}
-
-body{
-  background-color:#fff
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
-#container{
-  width:100%%;margin:0 auto;overflow:hidden
+.small-caps {
+  font-variant: small-caps;
 }
 
-.fb-like{
-  margin:0
-}
-
-header{
-  padding: 30px;
-  margin:0 auto;
-  font-family: -apple-system, '.SFNSText-Regular', 'Helvetica Neue', Roboto, 'Segoe UI', sans-serif;
-}
-header h1{
-  color: black;
-  margin:0 0 21px;
-  font-size:22px;
-  font-weight:500;
-  padding:0;
-  margin-bottom: 0.5em;
-}
-header h2{
-  font-size:15px;
-  line-height:21px;
-  color:gray;
-  margin:0;
-  font-weight:300
-}
-header .attribution{
-  font-size:15px;
-  line-height:21px;
-  font-weight:200;
-  color:gray;
-  margin:21px 0
-}
-header .attribution a{
-  text-decoration:none;
-  color: black
-}
-header .attribution a:hover{
-  color: blue
-}
-code,pre{
-  margin:0
-}
-.elements{
-  margin:20px 0
-}
-.elements ul{
-  margin:21px 0 0;
-  overflow:hidden;
-  padding:21px 0 0;
-  border-top:1px solid #eee
-}
-.elements li{
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 440px;
+  padding: 60px;
   box-sizing: border-box;
-  margin:0;
-  padding: 0 20px;
-  list-style:none
 }
-.elements li:nth-child(1),
-.elements li:nth-child(2){
-  margin-bottom:21px
-}
-.elements li .markup{
-  font-size:12px;
-  display:block;
-  min-width:320px;
-  font-family: -apple-system, '.SFNSText-Regular', 'Helvetica Neue', Roboto, 'Segoe UI', sans-serif;
-  color: gray;
-  line-height:21px;
-  margin:0
-}
-.elements .heading{
-  display:none
-}
-.elements fieldset{
-  max-width:70%
-}
-@media screen and (min-width:1060px){
-  #container{
-    width:100%;padding:0
-  }
-  header{
-    max-width: 400px;
-    margin: 100px auto;
-    text-align: center;
-  }
-  header .attribution{
-    margin-bottom:0
-  }
-  .fb-like{
-    margin:30px 0 0
-  }
-  .elements{
 
+header h1 {
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  margin: 0 0 40px 0;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #666;
+}
+header a:link,
+header a:visited {
+  color: #666;
+}
+header a:hover {
+  color: blue;
+}
+.show-disabled-control {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #666;
+}
+.show-disabled-control label:hover {
+  color: #444;
+}
+
+code,
+pre {
+  margin: 0;
+}
+#elements {
+  padding-top: 60px;
+  margin-left: 480px;
+}
+
+#elements .disabled-el {
+  display: none;
+}
+
+#elements.disabled-visible .disabled-el {
+  display: block;
+}
+
+.element {
+  margin-bottom: 40px;
+}
+
+.element pre {
+  margin-top: 12px;
+}
+
+.markup {
+  font-size: 12px;
+  display: block;
+  min-width: 320px;
+  font-family: monospace;
+  color: #666;
+  line-height: 20px;
+  margin: 0;
+}
+
+@media (orientation: portrait) {
+  header {
+    position: relative;
+    width: auto;
   }
-  .elements li{
-    float:left;
-    padding-left: 50px;
-    padding-right: 50px;
-    box-sizing: border-box;
-  }
-  .elements li:first-child,
-  .elements li:nth-child(2){
-    width:30%;
-    margin-bottom:0
-  }
-  .elements .heading{
-    display:block;
-    border:none;
-    padding-top:0;
-    margin-top:0
-  }
-  .elements .heading li {
-    padding:0 50px;
-    font-size:15px;
-    font-weight:200;
-    font-family: -apple-system, '.SFNSText-Regular', 'Helvetica Neue', Roboto, 'Segoe UI', sans-serif;
-    color: gray;
-    line-height:21px
+  #elements {
+    margin-left: 0;
+    padding: 0 24px;
   }
 }
